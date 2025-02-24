@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs';
 export class DisplayComponent implements OnInit, OnDestroy {
   
   private giphyServ = inject(GiphyService)
+  
   private sub!: Subscription
 
   giphyImages: string[] = []
@@ -23,6 +24,6 @@ ngOnInit(): void {
 }
 
 ngOnDestroy(): void {
-  this.sub.unsubscribe
+  this.sub.unsubscribe()
 }
 }
